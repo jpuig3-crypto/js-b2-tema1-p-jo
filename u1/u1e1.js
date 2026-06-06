@@ -4,6 +4,15 @@
 
 // Escribe aquí tu solución / escriviu aquí la vostra solució:
 
+function conditionalCallback(callback, param) {
+    // Si `param` no está definido o es falsy, devolvemos false y no llamamos al callback
+    if (!param) return false;
+
+    // Ejecutamos el callback pasando `param` y devolvemos el propio `param`
+    // (los tests esperan que la función retorne el valor de `param` cuando se ejecuta)
+    callback(param);
+    return param;
+}
 
 /**
 * TEST
