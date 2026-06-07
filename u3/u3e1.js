@@ -4,6 +4,17 @@
 
 // Escribe aquí tu solución / escriviu aquí la vostra solució:
 
+async function getAJoke(callback) {
+    try {
+        const response = await fetch("https://geek-jokes.sameerkumar.website/api?format=json");
+
+        const data = await response.json();
+
+        return data;
+    } catch (error) {
+        callback(error);
+    }
+}
 
 /**
 * TEST
