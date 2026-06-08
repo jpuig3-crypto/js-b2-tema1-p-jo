@@ -4,7 +4,28 @@
 
 //Escribe aquí tu solución / escriviu aquí la vostra solució:
 
+const converter = (function () {
+    function generate(text) {
+        if (typeof text !== 'string') {
 
+            let lowerText = text.toLowerCase();
+
+            const vowelsMap = {
+                "a": "1", "á": "1",
+                "e": "2", "é": "2",
+                "i": "3", "í": "3",
+                "o": "4", "ó": "4",
+                "u": "5", "ú": "5", "ü": "5"
+            };
+
+            return lowerText.replace(/[aeiouáéíóúü]/g, function (char) {
+                return vowelsMap[char];
+            });
+        }
+        
+        return generate;
+    }
+})();
 
 /**
 * TEST
