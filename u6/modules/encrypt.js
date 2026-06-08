@@ -4,4 +4,6 @@ function basicEncrypt(text, separator) {
 
     separator = separator || ' ';
     return codeList.join(separator);
+
+    export default basicEncrypt;
 }

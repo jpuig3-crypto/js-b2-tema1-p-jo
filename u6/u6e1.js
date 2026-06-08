@@ -4,7 +4,15 @@
 
 //Escribe aquí tu solución / escriviu aquí la vostra solució:
 
+import { GREET_TYPES, sayHi, sayBye } from './modules/greeting.js';
 
+function doGreet(name, type) {
+    if (type === GREET_TYPES.HI) {
+        return sayHi(name);
+    } else {
+        return sayBye(name);
+    }
+}
 
 /**
 * TEST
